@@ -5,15 +5,16 @@ using Parbad.Gateway.IranKish;
 
 namespace PaymentTest.Controllers
 {
-    public class Payment : Controller
+    [Route("[controller]/[action]")]
+    public class PaymentController : Controller
     {
         private readonly IOnlinePayment _OnlinePayment;
 
-        public Payment(IOnlinePayment onlinePayment)
+        public PaymentController(IOnlinePayment onlinePayment)
         {
             this._OnlinePayment = onlinePayment;
         }
-        [HttpPost]
+        
         [HttpPost("IranKishPayment")]
         public async Task<IActionResult> Pay(long Amount, long waletid, long userid)
         {

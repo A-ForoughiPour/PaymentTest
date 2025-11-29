@@ -5,7 +5,7 @@ using Parbad.Builder;
 using Parbad.Gateway.IranKish;
 using System.Security.Principal;
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Configuration.AddXmlFile("IranKish.xml", optional: false, reloadOnChange: true);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddParbad()
@@ -16,9 +16,10 @@ builder.Services.AddParbad()
          {
              accounts.AddInMemory(account =>
              {
-                 account.TerminalId = builder.Configuration["IranKish:TerminalId"];
-                 account.AcceptorId = builder.Configuration["IranKish:AcceptorId"];
-                 account.PublicKey = builder.Configuration["IranKish:PublicKey"];
+                 account.TerminalId = builder.Configuration["DocumentElement:IPGData:TerminalId"];
+                 account.AcceptorId = builder.Configuration["DocumentElement:IPGData:AcceptorId"];
+                 account.PublicKey = builder.Configuration["DocumentElement:IPGData:RSAPublicKey"];
+                 account.PassPhrase = builder.Configuration["DocumentElement:IPGData:PublicKey"];
              });
          });
     });
