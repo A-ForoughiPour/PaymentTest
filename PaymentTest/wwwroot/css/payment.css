@@ -1,0 +1,16 @@
+.cardbody{
+    width:100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+}
+.cardbody >div{
+    width:40%;
+    height:300px;
+}
+.buttonSection{
+ width:100%;
+ 
+}
