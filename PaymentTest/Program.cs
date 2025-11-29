@@ -5,7 +5,7 @@ using Parbad.Builder;
 using Parbad.Gateway.IranKish;
 using System.Security.Principal;
 var builder = WebApplication.CreateBuilder(args);
-builder.Configuration.AddXmlFile("IranKish.xml", optional: false, reloadOnChange: true);
+builder.Configuration.AddXmlFile("C:/Users/Administrator/Documents/Shvdev/PaymentTest/DataXmlFile.xml", optional: false, reloadOnChange: true);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddParbad()
@@ -22,7 +22,7 @@ builder.Services.AddParbad()
                  account.PassPhrase = builder.Configuration["DocumentElement:IPGData:PublicKey"];
              });
          });
-    });
+    }).ConfigureHttpContext(c => c.UseDefaultAspNetCore()).ConfigureStorage(s => s.UseMemoryCache());
 
 var app = builder.Build();
 

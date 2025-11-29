@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocumentElement>
+	<Shebalist>
+		<Name> </Name>
+		<Sheba>لطفا انتخاب کنید</Sheba>
+	</Shebalist>
+  
+
+	<BaseAddress >
+
+		<payment>https://ikc.shaparak.ir/iuiv3/IPG/Index</payment>
+		<token>https://ikc.shaparak.ir/api/v3/tokenization/make</token>
+		<verify>https://ikc.shaparak.ir/api/v3/confirmation/purchase</verify>
+		<inquery>https://ikc.shaparak.ir/api/v3/inquiry/single</inquery>
+									
+	</BaseAddress>
+
+ 
+
+
+	<IPGData>
+		
+
+    	<TerminalId>08175441</TerminalId>
+		<AcceptorId>992180008175441</AcceptorId>
+		<PassPhrase>E0984FB25281BC73</PassPhrase>
+		<URL>http://localhost:5000/Verifypage/Verify</URL>
+		<RSAPublicKey>
+			-----BEGIN PUBLIC KEY-----
+			MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDUj8XojE8x2z85rQVjdVrKdAv/
+			20ydONyWbzvSDVOSgsVVeiIock2bBevjiXlbOT/YR4lXOepul/iudoXoYUDVY12o
+			z6/BWsK7+kvyc0ID1fB62Ji2C9yDnfcd2T36wVP+lHDbGai01IbJ8TlENrlLbHrG
+			B+TqWYj1EN2dtXUskQIDAQAB
+			-----END PUBLIC KEY-----
+		</RSAPublicKey>
+		<CmsPreservationId></CmsPreservationId>
+
+
+
+	
+	
+	</IPGData>
+
+</DocumentElement>
